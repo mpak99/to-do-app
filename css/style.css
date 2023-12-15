@@ -1,8 +1,57 @@
 /* to do list styling */
 
-
+header {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    font-family: 'Bungee', sans-serif;
+}
+html {
+   
+}
 body {
     
+    
     height: 100vh;
-    background: url(../img/bg.png);
+    background-image: url(../img/bg.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    color: white;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items:center ;
+    font-family: 'Noto sans';
+    margin: 0;
+
+    padding: 0;
+
 }
+
+input {
+    flex: 5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+#add-task-container {
+    width: 350px;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
+    margin-bottom: 15rem;
+    margin-left: 100px;
+
+
+    display: flex;
+
+}
+
+
+
+
+
