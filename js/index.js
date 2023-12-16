@@ -3,7 +3,7 @@
 const addTaskBtn = document.getElementById('add-task');
 const taskContainer = document.getElementById('task-container');
 const inputTask = document.getElementById('input-task');
-console.log(inputTask)
+
 
 // Event Listner for add Button
 addTaskBtn.addEventListener('click', function(){
@@ -44,8 +44,15 @@ addTaskBtn.addEventListener('click', function(){
     deleteButton.addEventListener('click', function(e) {
 
         let target = e.target;
-
-        target.parentElement.parentElement.remove();
+        
+        if (target == deleteButton) {
+            target.parentElement.remove();
+            // console.log('WWWWWWWWWWWWw')
+        } else {
+            target.parentElement.parentElement.remove();
+        }
+        // console.log(target == deleteButton)
+      
 
 
     });
