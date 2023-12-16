@@ -7,23 +7,27 @@ header {
     font-family: 'Bungee', sans-serif;
 }
 html {
-   
+   scroll-behavior: smooth;
 }
 body {
     
     
     height: 100vh;
+
     background-image: url(../img/bg.jpg) ;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size:cover;
+    
     color: white;
     display: flex;
+    flex-direction: column;
     gap: 24px;
     justify-content: center;
     align-items:center ;
-    font-family: 'Noto sans';
+    font-family:'Source Sans Pro', sans-serif;
+    font-weight:bold;
     margin: 0;
 
     padding: 0;
@@ -35,23 +39,124 @@ input {
     margin-right: 10px;
     border-radius: 10px;
     font-size: 1.2rem;
-}
+    padding: 5px;
+    border: none;
+    background-color: #f4e1f5;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    
+    
+} 
 
 #add-task-container {
     width: 350px;
-    padding: 20px 10px;
-    background-color: #fff;
+    padding: 10px 10px;
+    background-color:  rgb(95, 51, 135);
     border-radius: 20px;
     box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
-    margin-bottom: 15rem;
-    margin-left: 100px;
-
-
+    margin-bottom: 20px;
     display: flex;
+    justify-items: center;
+    
 
+
+}
+
+#add-task {
+    flex: 1;
+    transition: .3s;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #f4e1f5;
+    color: rgb(72, 9, 75);
+    border:  aliceblue;
+    border-radius: 10px;
+}   
+
+#add-task:hover {
+
+    color: rgb(246, 246, 246);
+    background-color: rgb(175, 110, 237);
+    transform: rotate(360deg);
+    transform: scale(.90) ;
 }
 
 
 
 
+
+
+/*  styling for task added to to do list */
+
+.task {
+    width: 100%;
+    background-color:   #f4e1f5;
+    color: rgb(72, 9, 75);
+    
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+
+    padding:  5px;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.task li {
+    list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.task button {
+    flex: 1;
+    border-radius: 10px;
+    background-color:#f4e1f5;
+    cursor: pointer;
+}
+
+.task .checkTask {
+    color:  rgb(72, 9, 75);
+    margin-right: 5px;
+    /* border: solid 2px rgb(250, 21, 193); */
+    font-size: 1.5rem;
+    transition: .3s;
+}
+
+.task .deleteTask {
+    color:  rgb(72, 9, 75);
+    
+    /* border: solid 2px rgb(228, 7, 110); */
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.task .checkTask:hover,
+.task .deleteTask:hover {
+    color: rgb(246, 246, 246);
+    background-color: rgb(72, 9, 75);
+    transform: rotate(360deg);
+    transform: scale(.90) ;
+
+}
+
+
+
+ 
+
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    color: white;
+    text-align: center;
+}
 
