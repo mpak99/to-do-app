@@ -6,7 +6,16 @@ const inputTask = document.getElementById('input-task');
 
 
 // Event Listner for add Button
-addTaskBtn.addEventListener('click', function(){
+addTaskBtn.addEventListener('click', addTask);
+
+inputTask.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') {
+        addTask()
+    }
+})
+
+
+function addTask () {
 
     let task = document.createElement('div');
     task.classList.add('task');
@@ -57,7 +66,8 @@ addTaskBtn.addEventListener('click', function(){
 
     });
 
+}
 
 
-})
 
+// event listner for enter
